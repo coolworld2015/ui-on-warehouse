@@ -1,5 +1,5 @@
 # UI-Router
-git clone https://github.com/eduard-tkachuk/UI-Router.git
+git clone https://github.com/wintermute2015/ui-warehouse.git
 
 npm install
 gulp //default build
