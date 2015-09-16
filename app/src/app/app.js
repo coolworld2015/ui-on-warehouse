@@ -27,7 +27,7 @@ console.log($rootScope.currentUser);
     init.$inject = ['$rootScope'];
     function init($rootScope) {
         $rootScope.myConfig = {
-            webUrl: 'http://coolworld.herokuapp.com/' //TODO change URL
+            webUrl: 'http://coolworld2015.herokuapp.com/' //TODO change URL
             //webUrl: 'http://localhost:3000/'
         };
     }

@@ -6,7 +6,7 @@
 	routeConfig.$inject = ['$stateProvider','$urlRouterProvider'];
 
     function routeConfig($stateProvider, $urlRouterProvider) {
-        var webUrl = 'http://coolworld.herokuapp.com/'; //TODO change URL
+        var webUrl = 'http://coolworld2015.herokuapp.com/'; //TODO change URL
         //var webUrl = 'http://localhost:3000/';
 
 		function resolveResource(url, sort) {
