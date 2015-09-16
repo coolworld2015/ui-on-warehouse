@@ -42,8 +42,8 @@
             return parseInt(a.number) - parseInt(b.number);
         }
 
-//TODO  $urlRouterProvider.otherwise('/login');
-        $urlRouterProvider.otherwise('/main');
+        $urlRouterProvider.otherwise('/login');
+        //$urlRouterProvider.otherwise('/main');
 		
         $stateProvider
             .state('login', {

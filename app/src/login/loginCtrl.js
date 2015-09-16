@@ -50,11 +50,13 @@
 			if (users) {
 				for (var i = 0; i < users.length; i++) {
 					if (users[i].name == name && users[i].pass == pass) {
+                        $rootScope.currentUser = {
+                            name: name,
+                            pass: pass
+                        };
 						$state.go('main');
 					}
 				}
-			//vm.name = '1';
-			//vm.pass = '1';
 			vm.error = true;
 			}	
 		}

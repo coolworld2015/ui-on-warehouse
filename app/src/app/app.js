@@ -9,9 +9,8 @@
 	runHandler.$inject = ['$rootScope','$state'];
     function runHandler($rootScope, $state) {
 //TODO rename $stateChangeStart1 to $stateChangeStart
-        $rootScope.$on('$stateChangeStart1', function (event, toState, toParams) {
-console.log(toState);
-console.log($rootScope.currentUser);
+        $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+
             var requireLogin = toState.data.requireLogin;
             if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
                 event.preventDefault();
