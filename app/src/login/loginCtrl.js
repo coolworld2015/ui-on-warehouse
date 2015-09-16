@@ -19,6 +19,7 @@
 			
 		function init() {
 			$rootScope.loading = false;
+            $rootScope.currentUser = undefined;
 		}
 		
         function toLogin() {

@@ -26,7 +26,7 @@
                 client: $stateParams.item.client,
                 clientID: $stateParams.item.clientID,
                 date: $stateParams.item.date,
-                total: $stateParams.item.total + vm.total,
+                total: $stateParams.item.total - vm.total,
                 description: $stateParams.item.description
             };
 

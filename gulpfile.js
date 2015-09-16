@@ -95,7 +95,8 @@ gulp.task('dev', ['dev:scripts', 'dev:html', 'css']);
 gulp.task('build', ['index', 'dev']);
 
 gulp.task('prod', ['prod:scripts', 'prod:html', 'minify-css']);
-gulp.task('release', ['index', 'prod', 'test']);
+//gulp.task('release', ['index', 'prod', 'test']);
+gulp.task('release', ['index', 'prod']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./app/**', ['build']);
