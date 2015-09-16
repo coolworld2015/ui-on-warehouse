@@ -1,0 +1,35 @@
+(function () {
+    angular
+        .module('app', ['ui.router','ui.bootstrap']);
+
+    angular
+        .module('app')
+        .run(runHandler);
+		
+	runHandler.$inject = ['$rootScope','$state'];
+    function runHandler($rootScope, $state) {
+//TODO rename $stateChangeStart1 to $stateChangeStart
+        $rootScope.$on('$stateChangeStart1', function (event, toState, toParams) {
+console.log(toState);
+console.log($rootScope.currentUser);
+            var requireLogin = toState.data.requireLogin;
+            if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+                event.preventDefault();
+                $state.go('login');
+            }
+        });
+    }
+
+    angular
+        .module('app')
+        .run(init);
+
+    init.$inject = ['$rootScope'];
+    function init($rootScope) {
+        $rootScope.myConfig = {
+            webUrl: 'http://coolworld.herokuapp.com/' //TODO change URL
+            //webUrl: 'http://localhost:3000/'
+        };
+    }
+
+})();
