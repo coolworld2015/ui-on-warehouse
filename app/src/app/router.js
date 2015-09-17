@@ -1,4 +1,6 @@
 (function () {
+    'use strict';
+
     angular
         .module('app')
         .config(routeConfig);
@@ -13,15 +15,15 @@
 			resolver.$inject = ['$http', '$q', '$rootScope'];
 			function resolver($http, $q, $rootScope) {
 				return $http.get(url)
-						.then(function (result) {
-							$rootScope.loading = false;
-							return result.data.sort(sort);
-						})
-						.catch(function (reject) {
-							$rootScope.loading = false;
-							$rootScope.error = true;
-							return $q.reject(reject);
-						});
+                    .then(function (result) {
+                        $rootScope.loading = false;
+                        return result.data.sort(sort);
+                    })
+                    .catch(function (reject) {
+                        $rootScope.loading = false;
+                        $rootScope.myError = true;
+                        return $q.reject(reject);
+                    });
 			}
 
 			return resolver;

@@ -22,9 +22,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 		
@@ -33,9 +30,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 
@@ -47,9 +41,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 
@@ -61,9 +52,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 	}

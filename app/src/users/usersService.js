@@ -1,4 +1,6 @@
 (function () {
+    'use strict';
+
     angular
         .module('app')
         .factory('UsersService', UsersService);
@@ -21,9 +23,6 @@
                 .then(function (result) {
                     result.data.sort();
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 		
@@ -32,9 +31,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 		
@@ -43,9 +39,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
 
@@ -57,9 +50,6 @@
             return $http.post(url, item)
                 .then(function (result) {
                     return result;
-                })
-                .catch(function (reject) {
-                    return $q.reject(reject);
                 });
         }
     }

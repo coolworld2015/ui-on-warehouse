@@ -1,4 +1,6 @@
 ﻿(function () {
+    'use strict';
+
     angular
         .module('app')
         .controller('ClientsCtrl', ClientsCtrl);
@@ -32,7 +34,7 @@
             vm.title = 'Customers';
             vm.sort = 'name';
             $scope.currentPage = 1;
-            $scope.numPerPage = 10;//ClientsService.numPerPage;
+            $scope.numPerPage = 10;
             $scope.maxSize = 5;
 			 
 			vm.clients = clients;
