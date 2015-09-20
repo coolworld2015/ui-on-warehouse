@@ -15,4 +15,5 @@ gulp tdd  // all times
 npm start // run server.js
 npm prune // remove npm from package.json
 
-git config -- global user.name "wintermute2015"
+git config --global user.name "wintermute2015"
+git config --global user.email "wintermute2015"
