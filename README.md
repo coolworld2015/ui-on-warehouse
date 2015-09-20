@@ -1,7 +1,7 @@
 # UI-Router
 git clone https://github.com/wintermute2015/ui-warehouse.git
 
-npm install
+npm i
 gulp //default build
 
 gulp watch //no test
@@ -18,3 +18,18 @@ npm prune // remove npm from package.json
 git config --global user.name "wintermute2015"
 -------------------------------------------------------------------------------------------------
 git config --global user.email "wintermute2015"
+-------------------------------------------------------------------------------------------------
+Requirements:
+{Node.js,
+Android: Android SDK}
+-------------------------------------------------------------------------------------------------
+npm i cordova -g
+cordova create android_test
+cd android_test
+cordova platform add android
+cordova build android
+-------------------------------------------------------------------------------------------------
+cd platforms\android\build\outputs\apk
+-------------------------------------------------------------------------------------------------
+Move apk to Genymotion for running in VM
+-------------------------------------------------------------------------------------------------
