@@ -297,6 +297,9 @@
                 },
                 data: {
                     requireLogin: true
+                },
+                resolve: {
+                    invoice: resolveResource(webUrl + 'api/invoicein/get', sort1)
                 }
             })
 
