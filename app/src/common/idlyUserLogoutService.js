@@ -17,7 +17,6 @@
 
         function startWatch() {
             $timeout.cancel(timeout);
-            console.log('startWatch');
             timeout = $timeout(logout, IDLY_USER_TIMEOUT);
         }
 
