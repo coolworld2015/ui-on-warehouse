@@ -13,7 +13,7 @@
                 };
 
                 function serial(tasks) {
-                    var prevPromise = {};
+                    var prevPromise;
                     var error = new Error();
                     angular.forEach(tasks, function (task, key) {
                         var success = task.success || task;
