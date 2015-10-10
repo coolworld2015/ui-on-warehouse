@@ -19,11 +19,11 @@
             _errorHandler: errorHandler
         };
 
-        function addItem(store1, item1, clientID1, sum1) {
-            item = item1;
-            store = store1;
-            clientID = clientID1;
-            sum = sum1;
+        function addItem(storeParam, itemParam, clientIDParam, sumParam) {
+            item = itemParam;
+            store = storeParam;
+            clientID = clientIDParam;
+            sum = sumParam;
 
             return editGoodItem()
                 .then(editInputItem)
