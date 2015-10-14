@@ -1,5 +1,5 @@
 # UI-Router
-git clone https://github.com/wintermute2015/ui-warehouse.git
+git clone https://github.com/wintermute2015/ui-on-warehouse.git
 -------------------------------------------------------------------------------------------------
 npm i
 -------------------------------------------------------------------------------------------------
