@@ -57,11 +57,16 @@
         }
 
         function outputsDialog() {
-            var obj = {
+            var item = {
                 id: vm.id,
-                number: vm.number
+                number: vm.number,
+                client: vm.client,
+                clientID: vm.clientID,
+                date: vm.date,
+                total: vm.total,
+                description: vm.description
             };
-            $state.go('main.outputs-dialog', {item: obj});
+            $state.go('main.outputs-dialog', {item: item});
         }
 
         function outputsEditBack() {

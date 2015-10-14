@@ -431,6 +431,9 @@
                 },
                 data: {
                     requireLogin: true
+                },
+                resolve: {
+                    invoice: resolveResource(webUrl + 'api/invoiceout/get', sort1)
                 }
             })
 

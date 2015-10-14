@@ -108,5 +108,4 @@
             $rootScope.myError = true;
         }
     }
-})
-();
+})();
