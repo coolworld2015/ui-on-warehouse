@@ -5,9 +5,9 @@
         .module('app')
         .controller('OutputsDialogCtrl', OutputsDialogCtrl);
 
-    OutputsDialogCtrl.$inject = ['$state', '$q', '$rootScope', 'OutputsService', 'invoice', 'GoodsService', 'ClientsService', '$stateParams'];
+    OutputsDialogCtrl.$inject = ['$state', '$q', '$rootScope', 'OutputsService', 'OutputsInvoiceService', 'invoice', 'GoodsService', 'ClientsService', '$stateParams'];
 
-    function OutputsDialogCtrl($state, $q, $rootScope, OutputsService, invoice, GoodsService, ClientsService, $stateParams) {
+    function OutputsDialogCtrl($state, $q, $rootScope, OutputsService, OutputsInvoiceService, invoice, GoodsService, ClientsService, $stateParams) {
         var vm = this;
 
         angular.extend(vm, {
@@ -17,6 +17,7 @@
             _modifyGoods: modifyGoods,
             _findGood: findGood,
             _editGood: editGood,
+			_deleteOutputsInvoiceItem: deleteOutputsInvoiceItem,			
             outputsEditBack: outputsEditBack,
 			_errorHandler: errorHandler
         });
@@ -73,6 +74,7 @@
         function modifyGoods() {
             return findGood()
                 .then(editGood)
+                .then(deleteOutputsInvoiceItem)				
                 .catch(errorHandler)
         }
 
@@ -86,7 +88,8 @@
                         price: good.data.price,
                         quantity: quantity,
                         store: good.data.store,
-                        description: good.data.description
+                        description: good.data.description,
+						goodsID: vm.index[vm.i].id
                     };
                 });
         }
@@ -97,6 +100,13 @@
                     vm.i++;
                 })
                 .catch(errorHandler);
+        }
+		
+		function deleteOutputsInvoiceItem() {
+            return 	OutputsInvoiceService.deleteItem(vm.item.goodsID)
+				.then(function () {
+				})
+				.catch(errorHandler);
         }
 		
         function outputsEditBack() {
