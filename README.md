@@ -1,4 +1,4 @@
-# UI Warehouse
+# UI ON Warehouse
 git clone https://github.com/coolworld2015/ui-on-warehouse.git
 -------------------------------------------------------------------------------------------------
 npm i
